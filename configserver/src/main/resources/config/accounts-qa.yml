@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to Utkarsh Bank accounts related to QA APIs"
+  contactDetails:
+    name: "Mark Mason - QA Lead"
+    email: "mark.mason@utkarshbank.com"
+  onCallSupport:
+    - (055)232-2323
+    - (555)123-3212

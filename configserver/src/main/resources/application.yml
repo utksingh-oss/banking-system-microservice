@@ -1,0 +1,52 @@
+#spring:
+#  profiles:
+#    active: native #for using the config files in the class path
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-location: "file:///D:\\Spring Backend\\banking-system-microservice\\configuration"
+#          search-location: "classpath:/config"
+
+#-----------------------------------CONFIGURATION  FOR CONNECTING TO THE GIT REPO---------------------------------------
+spring:
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/utksingh-oss/banking-system-microservice-config" #github url
+          default-label: main # branch of the repo
+          timeout: 5 #seconds connection timeout
+          clone-on-start: true #will clone the properties on startup
+          force-pull: true # override the local changes
+
+#------------------------------CONFIGURATION FOR AUTO-UPDATING THE PROPERTIES-------------------------------------------
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+rabbitmq:
+  host: "localhost"
+  port: 5672
+  username: "guest"
+  password: "guest"
+#-------------------------------FOR ENCRYPTING-DECRYPTING PROPERTIES----------------------------------------------------
+encrypt:
+  key: "b7f9f72c7d8b4e6eae1c32aef9b0f347ad8e3fa4e0c91a5b33cf73cc21be7f91"
+#-----------------------------------------------------------------------------------------------------------------------
+server:
+  port: 8071
+#-----------------------------------------------------------------------------------------------------------------------

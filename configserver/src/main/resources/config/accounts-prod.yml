@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to Utkarsh Bank accounts related to Prod APIs"
+  contactDetails:
+    name: "Rishabh Singh - Product Owner"
+    email: "rishabh.singh@utkarshbank.com"
+  onCallSupport:
+    - (055)231-2312
+    - (555)233-2233
