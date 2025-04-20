@@ -1,2 +1,2 @@
-# banking-system-microservice
+# Banking System Microservice
 Banking System Microservice

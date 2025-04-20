@@ -1,0 +1,15 @@
+# actuator configuration
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-status:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoints:
+    health:
+      probes:
+        enabled: true
